@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -103,184 +101,180 @@ export default function About() {
 
   return (
     <>
-      <Header />
-      <main>
-        {/* Hero */}
-        <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Headshots14-6MnJgjCHP9oSh80mfLUIpDPO2ZMVIh.jpg"
-            alt="Boardroom Leadership Team"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-            quality={90}
-          />
-          {/* Overlay for text contrast */}
-          <div className="absolute inset-0 bg-black/40"></div>
+      {/* Hero */}
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Headshots14-6MnJgjCHP9oSh80mfLUIpDPO2ZMVIh.jpg"
+          alt="Boardroom Leadership Team"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+        {/* Overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* Text overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white px-4">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance">About Boardroom</h1>
-              <p className="text-2xl md:text-3xl opacity-90">Shaping Leaders, Transforming Economies</p>
-            </div>
+        {/* Text overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance">About Boardroom</h1>
+            <p className="text-2xl md:text-3xl opacity-90">Shaping Leaders, Transforming Economies</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Content */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  The Boardroom Summit is dedicated to fostering entrepreneurship and business excellence in the Idoma
-                  region and beyond. We bring together visionary leaders, innovative entrepreneurs, and business
-                  professionals to share knowledge, build networks, and drive economic transformation.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">What We Do</h2>
-                <ul className="space-y-4 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Host annual summits bringing together industry leaders and entrepreneurs</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Provide mentorship programs connecting experienced leaders with emerging entrepreneurs</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Recognize and celebrate outstanding achievements through awards</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Facilitate networking opportunities and business partnerships</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Share insights and best practices through expert-led sessions</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Attend?</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  Whether you're an established entrepreneur, a business professional, or someone looking to start your
-                  journey, the Boardroom Summit offers invaluable opportunities to:
-                </p>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">✓</span>
-                    <span>Learn from successful entrepreneurs and industry experts</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">✓</span>
-                    <span>Expand your professional network</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">✓</span>
-                    <span>Discover new business opportunities</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">✓</span>
-                    <span>Gain practical insights and strategies</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent font-bold">✓</span>
-                    <span>Get recognized for your achievements</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-8">
-                <Button size="lg" asChild>
-                  <Link href="/registration">Join Us Today</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Leadership Structure */}
-        <section className="py-16 md:py-24 bg-card">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Leadership Structure</h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-              {leaders.map((leader, index) => (
-                <div key={index} className="group">
-                  <div className="bg-background rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
-                    {/* Photo with actual images for team members */}
-                    <div className="aspect-square bg-gradient-to-br from-secondary to-primary flex items-center justify-center relative overflow-hidden">
-                      {leader.image ? (
-                        <Image
-                          src={leader.image || "/placeholder.svg"}
-                          alt={leader.name}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          quality={85}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="text-center text-primary-foreground">
-                          <div className="text-6xl font-bold opacity-20">{leader.position}</div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6 flex-1 flex flex-col">
-                      <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wide">{leader.title}</p>
-                      <h3 className="text-lg font-bold mb-3 text-foreground">{leader.name}</h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm flex-1">{leader.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Leadership values callout */}
-            <div className="max-w-4xl mx-auto bg-gradient-to-r from-accent/10 to-transparent rounded-lg p-8 border border-accent/20">
-              <p className="text-center text-muted-foreground leading-relaxed">
-                Our leadership team brings together decades of experience in entrepreneurship, business strategy, and
-                economic development. We are committed to creating an environment where leaders can thrive, networks can
-                flourish, and transformational ideas can take root.
+      {/* Content */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Mission</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The Boardroom Summit is dedicated to fostering entrepreneurship and business excellence in the Idoma
+                region and beyond. We bring together visionary leaders, innovative entrepreneurs, and business
+                professionals to share knowledge, build networks, and drive economic transformation.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Thematic Divisions */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Thematic Divisions</h2>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">What We Do</h2>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">•</span>
+                  <span>Host annual summits bringing together industry leaders and entrepreneurs</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">•</span>
+                  <span>Provide mentorship programs connecting experienced leaders with emerging entrepreneurs</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">•</span>
+                  <span>Recognize and celebrate outstanding achievements through awards</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">•</span>
+                  <span>Facilitate networking opportunities and business partnerships</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">•</span>
+                  <span>Share insights and best practices through expert-led sessions</span>
+                </li>
+              </ul>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {thematicDivisions.map((division, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-lg p-8 border border-border hover:border-accent hover:shadow-lg transition-all"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground">{division.name}</h3>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">{division.description}</p>
-                </div>
-              ))}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Attend?</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Whether you're an established entrepreneur, a business professional, or someone looking to start your
+                journey, the Boardroom Summit offers invaluable opportunities to:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span>Learn from successful entrepreneurs and industry experts</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span>Expand your professional network</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span>Discover new business opportunities</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span>Gain practical insights and strategies</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-accent font-bold">✓</span>
+                  <span>Get recognized for your achievements</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="pt-8">
+              <Button size="lg" asChild>
+                <Link href="/registration">Join Us Today</Link>
+              </Button>
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
+        </div>
+      </section>
+
+      {/* Leadership Structure */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Leadership Structure</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+            {leaders.map((leader, index) => (
+              <div key={index} className="group">
+                <div className="bg-background rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+                  {/* Photo with actual images for team members */}
+                  <div className="aspect-square bg-gradient-to-br from-secondary to-primary flex items-center justify-center relative overflow-hidden">
+                    {leader.image ? (
+                      <Image
+                        src={leader.image || "/placeholder.svg"}
+                        alt={leader.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="text-center text-primary-foreground">
+                        <div className="text-6xl font-bold opacity-20">{leader.position}</div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <p className="text-sm font-semibold text-accent mb-2 uppercase tracking-wide">{leader.title}</p>
+                    <h3 className="text-lg font-bold mb-3 text-foreground">{leader.name}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm flex-1">{leader.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Leadership values callout */}
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-accent/10 to-transparent rounded-lg p-8 border border-accent/20">
+            <p className="text-center text-muted-foreground leading-relaxed">
+              Our leadership team brings together decades of experience in entrepreneurship, business strategy, and
+              economic development. We are committed to creating an environment where leaders can thrive, networks can
+              flourish, and transformational ideas can take root.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Thematic Divisions */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-balance">Thematic Divisions</h2>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {thematicDivisions.map((division, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-lg p-8 border border-border hover:border-accent hover:shadow-lg transition-all"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">{division.name}</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{division.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }

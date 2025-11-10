@@ -1,6 +1,5 @@
 "use client"
 
-import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { useEffect, useState } from "react"
 import { createClient } from "@/lib/supabase/client"
@@ -45,7 +44,6 @@ export default function Program() {
 
   return (
     <>
-      <Header />
       <main>
         {/* Hero */}
         <section className="py-16 md:py-24 bg-primary text-primary-foreground">
