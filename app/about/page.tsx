@@ -113,6 +113,8 @@ export default function About() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
+            quality={90}
           />
           {/* Overlay for text contrast */}
           <div className="absolute inset-0 bg-black/40"></div>
@@ -221,6 +223,9 @@ export default function About() {
                           alt={leader.name}
                           fill
                           className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          quality={85}
+                          loading="lazy"
                         />
                       ) : (
                         <div className="text-center text-primary-foreground">
