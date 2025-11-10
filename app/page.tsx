@@ -1,56 +1,59 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { ArrowRight, Users, Briefcase, Trophy, Calendar } from "lucide-react"
-import Image from "next/image"
+"use client"
 
-export default function Home() {
+import { Users, Briefcase, Trophy, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
+import { Footer } from "@/components/footer"
+
+const Page = () => {
   return (
     <>
-      <Header />
       <main>
-        <section className="relative py-20 md:py-32 bg-gradient-to-br from-black to-black/95 overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-10 right-10 w-72 h-72 bg-[#C8102E] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#C8102E] rounded-full blur-3xl"></div>
+        <section className="relative h-screen flex items-center overflow-hidden">
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19264733_690328184505668_6606660888089315828_o-jXW6KmqVvSi0SeAwJzQK06ln4qka5x.webp"
+              alt="Boardroom conference"
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+            />
+            {/* Dark gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center text-white">
-              {/* Logo Display */}
-              <div className="mb-8 flex justify-center">
-                <div className="w-24 h-24 relative">
-                  <Image
-                    src="/logo.png"
-                    alt="Boardroom Logo"
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-contain drop-shadow-lg"
-                  />
-                </div>
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 max-w-2xl">
+            <div className="space-y-6">
+              {/* Accent line */}
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-1 bg-[#C8102E]" />
+                <span className="text-[#C8102E] font-semibold text-sm tracking-widest uppercase">
+                  Boardroom Summit 2025
+                </span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Boardroom</h1>
-              <p className="text-xl md:text-2xl mb-4 font-semibold text-[#C8102E]">
-                The Idoma Entrepreneurship Summit 2025
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-pretty">
+                Transform Your Business Mindset
+              </h1>
+
+              <p className="text-lg md:text-xl text-gray-100 max-w-xl">
+                Join industry leaders and entrepreneurs for an exclusive summit focused on mindset transformation and
+                economic empowerment.
               </p>
-              <p className="text-lg md:text-xl mb-8 opacity-95">Shaping Leaders, Transforming Economies</p>
-              <p className="text-base md:text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                Join us for an extraordinary gathering of entrepreneurs, innovators, and business leaders. Network,
-                learn, and grow with industry experts and fellow visionaries.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-[#C8102E] hover:bg-[#C8102E]/90 text-white gap-2" asChild>
-                  <Link href="/registration">
-                    Register Now <ArrowRight size={20} />
-                  </Link>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button size="lg" className="bg-[#C8102E] hover:bg-[#C8102E]/90 text-white" asChild>
+                  <Link href="/registration">Register Now</Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  asChild
                   className="border-white text-white hover:bg-white/10 bg-transparent"
+                  asChild
                 >
                   <Link href="/about">Learn More</Link>
                 </Button>
@@ -121,3 +124,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Page
