@@ -32,7 +32,7 @@ const Page = () => {
               <div className="flex items-center gap-3">
                 <div className="w-12 h-1 bg-[#C8102E]" />
                 <span className="text-[#C8102E] font-semibold text-sm tracking-widest uppercase">
-                  Boardroom Summit 2025
+                  Boardroom Summit 2nd January, 2026
                 </span>
               </div>
 
@@ -112,7 +112,7 @@ const Page = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Join hundreds of entrepreneurs and business leaders at the Boardroom Summit 2025. Secure your spot today.
+              Join hundreds of entrepreneurs and business leaders at the Boardroom Summit 2026. Secure your spot today.
             </p>
             <Button size="lg" className="bg-[#C8102E] hover:bg-[#C8102E]/90 text-white" asChild>
               <Link href="/registration">Get Your Ticket</Link>

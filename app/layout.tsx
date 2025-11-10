@@ -10,9 +10,9 @@ const _lexend = Lexend({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Boardroom - The Idoma Entrepreneurship Summit 2025",
+  title: "Boardroom - The Idoma Entrepreneurship Summit 2026",
   description: "Shaping Leaders, Transforming Economies. Join us for the Idoma Entrepreneurship Summit 2025.",
-  generator: "v0.app",
+  generator: "",
   icons: {
     icon: "/logo.png",
   },
