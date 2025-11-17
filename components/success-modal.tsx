@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2 } from 'lucide-react'
 
 interface SuccessModalProps {
   email: string
@@ -14,9 +14,10 @@ export function SuccessModal({ email, onClose }: SuccessModalProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowConfetti(false)
-    }, 2000)
+      onClose()
+    }, 5000)
     return () => clearTimeout(timer)
-  }, [])
+  }, [onClose])
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -68,7 +69,7 @@ export function SuccessModal({ email, onClose }: SuccessModalProps) {
           </p>
         </div>
 
-        <p className="text-sm text-gray-500">Redirecting you to the home page in 3 seconds...</p>
+        <p className="text-sm text-gray-500">Redirecting you to the home page in 5 seconds...</p>
       </div>
     </div>
   )

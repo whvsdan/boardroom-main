@@ -1,14 +1,13 @@
 "use client"
 
 import type React from "react"
-
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { AlertCircle, Users, Briefcase, BookOpen, Sparkles } from "lucide-react"
+import { useRouter } from 'next/navigation'
+import { AlertCircle, Users, Briefcase, BookOpen, Sparkles } from 'lucide-react'
 import { SuccessModal } from "@/components/success-modal"
 import { submitRegistration } from "@/app/actions/registration-submit"
 
@@ -115,7 +114,6 @@ export default function Registration() {
 
   return (
     <>
-      <Header />
       <main>
         <section className="relative py-20 md:py-32 bg-gradient-to-br from-black via-black to-black/95 text-white overflow-hidden">
           <div className="absolute inset-0 opacity-5">
